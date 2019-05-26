@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Web Audio Transformer</title>
+    <link href="styles/app.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="styles/jquery-ui.min.css" />
+    <link rel="stylesheet" href="styles/jquery.ui.slider.min.css" />
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+
+    <script src="scripts/Pizzicato.js"></script>
+
+    <script src="scripts/pizzi.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <header>
+        <h1>Web Audio Transformer</h1>
+      </header>
+
+      <section class="main-controls">
+        <canvas class="visualizer"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+
+        <div class="container">
+
+          <div class="left">
+            <div class="sliderContainer">
+                <div class="sliderLabel">Pitch ratio</div>
+                <div id="pitchRatioSlider"></div>
+                <div id="pitchRatioDisplay" class="sliderDisplay"></div>
+            </div>
+
+            <div class="sliderContainer">
+                <div class="sliderLabel">Overlap ratio</div>
+                <div id="overlapRatioSlider"></div>
+                <div id="overlapRatioDisplay" class="sliderDisplay"></div>
+            </div>
+
+            <div class="sliderContainer">
+                <div class="sliderLabel">Grain size</div>
+                <div id="grainSizeSlider"></div>
+                <div id="grainSizeDisplay" class="sliderDisplay"></div>
+            </div>
+
+            <div class="sliderContainer">
+              <div class="sliderLabel">Visualisation</div>
+              <div id="audioVisualisationSlider"></div>
+              <div id="audioVisualisationDisplay" class="sliderDisplay"></div>
+            </div>
+          </div>
+
+          <div id="right">
+
+            <div class="range-slider">
+              <span>Distortion: </span>
+              <input type="range" id="range" value="0">
+            </div>
+
+            <div class="range-slider">
+              <span>Low Pass Filter: </span>
+              <input type="range" id="rangefilter" value="0">
+            </div>
+
+            <div>
+              <button id="white">White Noise</button>
+              <button id="pink">Pink Noise</button>
+              <button id="brown">Brown Noise</button>
+              <button id="annoying">Annoying Sound</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="bottom">
+      <pre id="log"></pre>
+      <span class="sound-clips"></span>
+    </section>
+
+    <script src="scripts/mediaDevices-getUserMedia-polyfill.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+  </body>
+</html>

@@ -1,18 +1,48 @@
-Pitch shifter
-=============
+# Web Audio Transformer
 
-This is a very simple pith shifter using HTML5 Web Audio API. It's based in the principles of granular synthesis,
-instead of FFT analysis and transformation, to keep things simple and fast. In order to use the microphone input, a
-browser supporting the Media Stream API is needed.
+The following Project is made for Speech and Audio Editing course of Ionian University.The project was based on
+two repositories and all copyright belong to their creators.
 
-There are three different audio graphic representations for fun, just drag the sliders and enjoy!
+The app uses user audio input with microphone and transforms the audio with effects like Pitch , Overlap , Distortion with the volume of user's choice. Also an white noise and annoying noise can be played as a background noise . User can also choose spectrum wave or sonogram Visualization type.
 
-![Waveform screenshot](http://urtzurd.github.io/html-audio/static/img/screenshot.png "Screenshot of the waveform display")
+![Web Audio Transformer Screenshot](https://user-images.githubusercontent.com/22657181/58373945-4858f480-7f3e-11e9-841b-a2c545951824.PNG "Screenshot of the Web Audio API app")
 
-Live Demo
-=========
-A live demo can be found here: <a href="https://urtzurd.github.io/html-audio/static/">https://urtzurd.github.io/html-audio/static/</a>
+###### For better app use
 
-Thanks
-======
-[DonKarlssonSan](http://github.com/DonKarlssonSan) for updating the project to the current version of the Web Audio API.
+- In order to use the microphone, you may have to enable a configuration flag:
+    -Go to chrome://flags
+    -Enable the Web Audio Input options
+    -Restart the browser
+- Use the microphone with headphones or you may get a lot of feedback
+- Use anonymous browsing
+
+###### Reported Bugs
+
+1. You have to play Annoying Sound first in order the White Noise to Work
+2. Distortion enables a very annoying noise
+3. In order to use the microphone, you may have to enable a configuration flag
+4. The Transformed can not be downloaded. Instead normal voice can
+
+###### Future Expansions
+
+- Resolve Bug problems
+- Add more audio transform effects
+- Add video Recording and saving-downloading
+- Add possibility of video manipulation
+- Make the app as an downloadable Desktop app
+
+###### Big Thanks
+
+- [mdn/web-dictaphone](https://github.com/mdn/web-dictaphone)
+- [urtzurd/html-audio](https://github.com/urtzurd/html-audio)
+- [alemangui/pizzicato](https://github.com/alemangui/pizzicato)
+
+###### Useful Links
+
+- [MDN web docs-Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [webrtc/samples](https://github.com/webrtc/samples/tree/gh-pages/src/content/getusermedia/record)
+- [CSS-Tricks](https://css-tricks.com/introduction-web-audio-api/)
+- [NoiseHack](https://noisehack.com/generate-noise-web-audio-api/)
+- [WEB](https://developers.google.com/web/updates/2016/01/mediarecorder)
+- [W3C](https://w3c.github.io/mediacapture-record/MediaRecorder.html)
+- [Pizzicato](https://alemangui.github.io/pizzicato/)

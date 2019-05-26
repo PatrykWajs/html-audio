@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*background-color: white;*/
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+}
+
+.container {
+    display: inline-flex;
+    width: 100%;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10%;
+    padding-right: 7%;
+    padding-top: 1em;
+    padding-bottom: 0%;
+}
+
+#left{
+    float:left;
+    width:45%;
+}
+
+#right{
+    float: right;
+    width:55%;
+}
+
+.sliderLabel {
+    width: 5em;
+    float: left;
+}
+
+.sliderDisplay {
+    width: 104px;
+    float: left;
+    text-align: right;
+}
+
+#pitchRatioSlider, #overlapRatioSlider, #grainSizeSlider , #distortionRatioSlider{
+    width: 272px;
+    float: left;
+}
+
+.warningContainer {
+    background-color: rgb(85, 0, 0);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 480px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.main-controls {
+  padding: 0.5rem 0;
+}
+
+canvas {
+  display: block;
+  padding-top: 10px;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.sliderContainer {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+#audioVisualisationSlider {
+    margin-left: 144px;
+    width: 128px;
+    float: left;
+}
+
+.range-slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons button {
+  font-size: 1rem;
+  padding: 1rem;
+  width: calc(50% - 0.25rem);
+}
+
+button {
+  font-size: 1rem;
+  background: #0088cc;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  padding: 0.5rem;
+}
+
+#white{
+  background: black;
+  margin-top: 10px;
+}
+
+#pink{
+  background: black;
+  margin-top: 10px;
+}
+
+#brown{
+  background: black;
+  margin-top: 10px;
+}
+
+#annoying{
+  background: red;
+  margin-top: 10px;
+}
+
+button:hover, button:focus {
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+  background: #0ae;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
+  transform: translateY(2px);
+}
+
+section, article {
+  display: block;
+}
+
+article{
+  margin: 0%;
+}
+
+#bottom{
+  position: fixed;
+  height:18%;
+  width: 100%;
+  background-color: #333;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+pre{
+  width:36%;
+  float:left;
+}
+
+/* Make the clips use as much space as possible, and
+ * also show a scrollbar when there are too many clips to show
+ * in the available space */
+
+.sound-clips {
+  width:64%;
+  float:right;
+}
+
+.clip {
+  padding-bottom: 1rem;
+}
+
+audio {
+  width: 100%;
+  display: block;
+  margin: 1rem auto 0.5rem;
+}
+
+.clip p {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.clip button {
+  font-size: 1rem;
+  float: right;
+}
+
+button.delete {
+  background: #f00;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* Cursor when clip name is clicked over */
+
+.clip p {
+  cursor: pointer;
+}
+
+/* Adjustments for wider screens */
+@media all and (min-width: 800px) {
+  /* Don't take all the space as readability is lost when line length
+     goes past a certain size */
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
