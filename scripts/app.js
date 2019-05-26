@@ -265,9 +265,16 @@ var pitchShifter = (function () {
 
 					//connect filters with audioContext output
 
+					audioSource.connect(lowpassfilter);
 					lowpassfilter.connect(audioContext.destination);
+
+					audioSource.connect(highpassfilter);
 					highpassfilter.connect(audioContext.destination);
+
+					audioSource.connect(lowshelffilter);
 					lowshelffilter.connect(audioContext.destination);
+
+					audioSource.connect(highshelffilter);
 					highshelffilter.connect(audioContext.destination);
 
 					//configure filters
