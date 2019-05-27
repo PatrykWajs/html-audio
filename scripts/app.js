@@ -264,7 +264,7 @@ var pitchShifter = (function () {
 					distortion.connect(audioContext.destination);
 
 					//connect filters with audioContext output
-
+					/*
 					audioSource.connect(lowpassfilter);
 					lowpassfilter.connect(audioContext.destination);
 
@@ -276,28 +276,28 @@ var pitchShifter = (function () {
 
 					audioSource.connect(highshelffilter);
 					highshelffilter.connect(audioContext.destination);
-
+					*/
 					//configure filters
 
 					//Low Pass: Allows frequencies below the cutoff frequency to pass through and attenuates frequencies above the cutoff.
 
 					lowpassfilter.type = "lowpass";
-					lowpassfilter.gain.value = 50;
+					lowpassfilter.gain.value = 25;
 
 					//High Pass: Allows frequencies above the cutoff frequency to pass through and attenuates frequencies below the cutoff.
 
 					highpassfilter.type = "highpass";
-					highpassfilter.gain.value = 50;
+					highpassfilter.gain.value = 25;
 
 					//Low Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the lower frequencies.
 
 					lowshelffilter.type = "lowshelf";
-					lowshelffilter.gain.value = 50;
+					lowshelffilter.gain.value = 25;
 
 					//High Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the higher frequencies.
 
 					highshelffilter.type = "highshelf";
-					highshelffilter.gain.value = 50;
+					highshelffilter.gain.value = 25;
 
 					//using gain and distortion functions
 
